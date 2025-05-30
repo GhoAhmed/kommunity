@@ -1,6 +1,9 @@
 import AboutSection from "@/components/shared/AboutSection";
+import ContactSection from "@/components/shared/ContactSection";
 import { Hero } from "@/components/shared/Hero";
+import ImpactSection from "@/components/shared/ImpactSection";
 import ProgramsSection from "@/components/shared/ProgramsSection";
+import TestimonialsSection from "@/components/shared/TestimonialsSection";
 
 
 export default function Home() {
@@ -9,10 +12,9 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ProgramsSection />
-      {/* <Research /> */}
-      {/* <Testimonials /> */}
-      {/* <News /> */}
-      {/* <ContactSection /> */}
+      <ImpactSection />
+      <TestimonialsSection />
+      <ContactSection />
     </main>
   );
 }
