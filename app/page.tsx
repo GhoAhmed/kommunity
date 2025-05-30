@@ -1,6 +1,18 @@
+import AboutSection from "@/components/shared/AboutSection";
+import { Hero } from "@/components/shared/Hero";
+import ProgramsSection from "@/components/shared/ProgramsSection";
+
 
 export default function Home() {
   return (
-    <h1 className="text-3xl">Hello!</h1>
+    <main className="flex flex-col">
+      <Hero />
+      <AboutSection />
+      <ProgramsSection />
+      {/* <Research /> */}
+      {/* <Testimonials /> */}
+      {/* <News /> */}
+      {/* <ContactSection /> */}
+    </main>
   );
 }
