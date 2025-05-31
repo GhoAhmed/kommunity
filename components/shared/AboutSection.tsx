@@ -4,16 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
+import { features } from '@/lib/constants';
 
 const AboutSection = () => {
-    const features = [
-        "World-class educational institutions",
-        "Groundbreaking research initiatives",
-        "Community development programs",
-        "Innovation & entrepreneurship hub",
-        "Cultural heritage preservation",
-        "Sustainable development focus"
-    ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -57,10 +50,10 @@ const AboutSection = () => {
                     <motion.div variants={itemVariants}>
                         <h2 className="section-title">About Our Foundation</h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            Founded in 1995, KOmmunity has been at the forefront of education, research, and community development. Our mission is to unlock human potential and create a knowledge-based economy that benefits not only our local communities but the entire world.
+                            Founded in the heart of innovation, Kwiktek is a next-generation tech startup dedicated to building impactful digital products and empowering learners worldwide. Our mission is to drive growth through intelligent SaaS platforms, AI-powered tools, and accessible educational content that equips individuals and businesses for the digital age.
                         </p>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                            Through our extensive network of educational institutions, research centers, and community programs, we address critical challenges facing modern societies while preserving cultural heritage and promoting sustainable development.
+                            With a strong focus on software development, real-world learning, and future-ready solutions, Kwiktek bridges the gap between technology and education. Whether it&apos;s through interactive courses, practical tutorials, or smart automation tools, we&apos;re shaping a smarter, more connected future.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -79,14 +72,14 @@ const AboutSection = () => {
                         <div className="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-6">
                             <div className="text-center px-4">
                                 <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">50+</div>
-                                <div className="text-sm text-gray-500">Global Partners</div>
+                                <div className="text-sm text-gray-500">Online Courses</div>
                             </div>
                             <div className="text-center px-4">
-                                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">100+</div>
+                                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">10+</div>
                                 <div className="text-sm text-gray-500">Active Programs</div>
                             </div>
                             <div className="text-center px-4">
-                                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">250k+</div>
+                                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">1k+</div>
                                 <div className="text-sm text-gray-500">Lives Impacted</div>
                             </div>
                         </div>

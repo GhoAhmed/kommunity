@@ -42,8 +42,7 @@ const ContactSection = () => {
                 >
                     <h2 className="section-title mx-auto">Get In Touch</h2>
                     <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Have questions about our programs or want to collaborate? Reach out to us and
-                        our team will get back to you as soon as possible.
+                        Your thoughts matter to us! Share your experience or suggestions and help us continue to improve and grow.
                     </p>
                 </motion.div>
 
@@ -67,8 +66,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                                    <a href="mailto:info@KOmmunityfoundation.org" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                                        info@kommunity.com
+                                    <a href="mailto:kwiktek0@gmail.com" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                        kwiktek0@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -79,8 +78,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
-                                    <a href="tel:+97444541234" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                                        +974 4454 1234
+                                    <a href="tel:+21629492766" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                        +216-29492766
                                     </a>
                                 </div>
                             </div>
@@ -92,9 +91,9 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Address</h4>
                                     <p className="text-gray-900 dark:text-white">
-                                        KOmmunity Headquarters<br />
+                                        KwikTek Headquarters<br />
                                         Education City<br />
-                                        Juhanzberg, South-Africa
+                                        Tunisia
                                     </p>
                                 </div>
                             </div>

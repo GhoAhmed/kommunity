@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kommunity",
-  description: "Created by the Kommunity team",
+  title: "KwikTek",
+  description: "Created by the KwikTek team",
 };
 
 export default function RootLayout({

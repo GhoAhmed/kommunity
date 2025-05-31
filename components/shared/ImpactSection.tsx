@@ -3,14 +3,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { stats } from '@/lib/constants';
 
 const ImpactSection = () => {
-    const stats = [
-        { value: '50+', label: 'Countries Reached' },
-        { value: '100K+', label: 'Students Educated' },
-        { value: '500+', label: 'Research Projects' },
-        { value: '$2.5B+', label: 'Invested in Development' },
-    ];
 
     return (
         <section className="py-24 relative bg-purple-700 text-white">
@@ -63,7 +58,7 @@ const ImpactSection = () => {
                         <div>
                             <h3 className="text-2xl font-semibold mb-4">Transforming Lives Through Education</h3>
                             <p className="text-purple-100 mb-6">
-                                Our educational initiatives have reached students from more than 50 countries,
+                                Our educational initiatives have reached students from more than 50 schools,
                                 providing access to quality education and fostering intercultural understanding.
                             </p>
                             <div className="h-2 bg-white/20 rounded-full overflow-hidden">
@@ -83,8 +78,8 @@ const ImpactSection = () => {
                         <div>
                             <h3 className="text-2xl font-semibold mb-4">Advancing Scientific Research</h3>
                             <p className="text-purple-100 mb-6">
-                                Our research initiatives have led to breakthrough discoveries in medicine, sustainable
-                                energy, and technology, contributing to global scientific advancement.
+                                Our research initiatives have led to breakthrough discoveries in agriculture, sustainable
+                                energy, and AI, contributing to the technology advancement.
                             </p>
                             <div className="h-2 bg-white/20 rounded-full overflow-hidden">
                                 <motion.div

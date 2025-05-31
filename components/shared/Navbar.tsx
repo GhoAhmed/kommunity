@@ -58,7 +58,7 @@ export const Navbar = () => {
             <div className="container mx-auto px-4 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
                     <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                        <span className="font-bold text-white text-lg">KO</span>
+                        <span className="font-bold text-white text-lg">KT</span>
                     </div>
                     <span
                         className={cn(
@@ -66,7 +66,7 @@ export const Navbar = () => {
                             isScrolled ? "text-gray-800 dark:text-white" : "text-gray-800 dark:text-white"
                         )}
                     >
-                        KOmmunity
+                        KwikTek
                     </span>
                 </Link>
 

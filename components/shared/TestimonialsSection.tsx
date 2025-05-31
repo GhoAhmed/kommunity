@@ -4,30 +4,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-
-const testimonials = [
-    {
-        id: 1,
-        content: "KOmmunity has transformed my academic journey. The resources, mentorship, and global exposure I received were invaluable for my career and personal growth.",
-        author: "Sarah Al-Thani",
-        title: "PhD Graduate, Georgetown University in KOmmunity",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=922&q=80",
-    },
-    {
-        id: 2,
-        content: "As a researcher, the foundation provided me with world-class facilities and funding to pursue groundbreaking research in sustainable energy. Their commitment to innovation is remarkable.",
-        author: "Dr. James Wilson",
-        title: "Lead Researcher, Energy Innovation Program",
-        image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80",
-    },
-    {
-        id: 3,
-        content: "The entrepreneurship program gave me the skills, connections, and confidence to launch my tech startup. Their holistic approach to innovation and business development is exceptional.",
-        author: "Fatima Ahmed",
-        title: "Founder & CEO, EcoTech Solutions",
-        image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=778&q=80",
-    },
-];
+import { testimonials } from '@/lib/constants';
 
 const TestimonialsSection = () => {
     const [current, setCurrent] = useState(0);
@@ -84,7 +61,7 @@ const TestimonialsSection = () => {
                                 </div>
                                 <div className="flex-1">
                                     <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 italic">
-                                        @quote{testimonials[current].content}@quote
+                                        &quot;{testimonials[current].content}&quot;
                                     </p>
                                     <div>
                                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white">

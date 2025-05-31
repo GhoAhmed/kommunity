@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export const Hero = () => {
     return (
@@ -25,19 +26,23 @@ export const Hero = () => {
                         className="text-center lg:text-left"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-10 md:leading-14">
-                            <span className="gradient-text">Empowering</span> Communities Through Education & Innovation
+                            <span className="block gradient-text">KwikTek</span> Smart Tech & Stronger Business
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
-                            We are building a future where education, research, and innovation converge to transform lives and create lasting impact across generations.
+                            From custom software to cutting-edge AI, KWIKTEK delivers fast, scalable solutions that drive real impact.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <Button size="lg" className="btn-primary">
-                                Discover Our Programs
-                                <ArrowRight className="ml-2 w-4 h-4" />
-                            </Button>
-                            <Button size="lg" variant="outline">
-                                Learn About Us
-                            </Button>
+                            <Link href={"/services"}>
+                                <Button size="lg" className="btn-primary">
+                                    Discover Our Services
+                                    <ArrowRight className="ml-2 w-4 h-4" />
+                                </Button>
+                            </Link>
+                            <Link href={"/about"}>
+                                <Button size="lg" variant="outline">
+                                    Learn About Us
+                                </Button>
+                            </Link>
                         </div>
                     </motion.div>
 
@@ -66,7 +71,7 @@ export const Hero = () => {
                             transition={{ duration: 0.6, delay: 0.6 }}
                             className="absolute -left-8 bottom-16 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-4 max-w-[180px]"
                         >
-                            <div className="text-purple-600 dark:text-purple-400 font-bold text-3xl">28+</div>
+                            <div className="text-purple-600 dark:text-purple-400 font-bold text-3xl">10+</div>
                             <div className="text-sm text-gray-500 dark:text-gray-400">Years of Excellence</div>
                         </motion.div>
 
@@ -77,7 +82,7 @@ export const Hero = () => {
                             className="absolute right-8 -bottom-6 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-4 max-w-[180px]"
                         >
                             <div className="text-purple-600 dark:text-purple-400 font-bold text-3xl">50+</div>
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Global Partnerships</div>
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Online Courses</div>
                         </motion.div>
                     </motion.div>
                 </div>

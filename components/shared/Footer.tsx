@@ -12,14 +12,14 @@ const Footer = () => {
                     <div>
                         <Link href="/" className="flex items-center gap-2 mb-6">
                             <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                                <span className="font-bold text-white text-lg">QF</span>
+                                <span className="font-bold text-white text-lg">KT</span>
                             </div>
                             <span className="font-bold text-xl text-white">
-                                KOmmunity
+                                KwikTek
                             </span>
                         </Link>
                         <p className="text-gray-400 mb-6">
-                            Unlocking human potential through education, research, and community development for a sustainable future.
+                            From powerful SaaS platforms to intelligent AI integrations, we craft innovative tech solutions that help businesses grow.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -44,16 +44,13 @@ const Footer = () => {
                                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link>
                             </li>
                             <li>
-                                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors">Our Programs</Link>
+                                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">Our Programs</Link>
                             </li>
                             <li>
-                                <Link href="/research" className="text-gray-400 hover:text-white transition-colors">Research</Link>
+                                <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">Research</Link>
                             </li>
                             <li>
-                                <Link href="/events" className="text-gray-400 hover:text-white transition-colors">Events</Link>
-                            </li>
-                            <li>
-                                <Link href="/news" className="text-gray-400 hover:text-white transition-colors">News & Media</Link>
+                                <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">Events</Link>
                             </li>
                             <li>
                                 <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link>
@@ -65,19 +62,19 @@ const Footer = () => {
                         <h4 className="text-white text-lg font-semibold mb-6">Education</h4>
                         <ul className="space-y-3">
                             <li>
-                                <Link href="/education/k12" className="text-gray-400 hover:text-white transition-colors">K-12 Education</Link>
+                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Education</Link>
                             </li>
                             <li>
-                                <Link href="/education/higher" className="text-gray-400 hover:text-white transition-colors">Higher Education</Link>
+                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Courses</Link>
                             </li>
                             <li>
-                                <Link href="/education/scholarships" className="text-gray-400 hover:text-white transition-colors">Scholarships</Link>
+                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Soft Skills</Link>
                             </li>
                             <li>
-                                <Link href="/education/online" className="text-gray-400 hover:text-white transition-colors">Online Learning</Link>
+                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Online Learning</Link>
                             </li>
                             <li>
-                                <Link href="/education/professional" className="text-gray-400 hover:text-white transition-colors">Professional Development</Link>
+                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Professional Development</Link>
                             </li>
                         </ul>
                     </div>
@@ -91,7 +88,7 @@ const Footer = () => {
                                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                                     </svg>
                                 </span>
-                                <span>KOmmunity Headquarters<br />Education City, Juhanzberg, South-Africa</span>
+                                <span>KwikTek Headquarters<br />Education City, Tunisia</span>
                             </p>
                             <p className="flex items-center">
                                 <span className="text-purple-400 mr-3">
@@ -109,7 +106,7 @@ const Footer = () => {
                                         <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                                     </svg>
                                 </span>
-                                <span>+974 4454 1234</span>
+                                <span>+216 29 492 766</span>
                             </p>
                             <p className="flex items-center">
                                 <span className="text-purple-400 mr-3">
@@ -117,7 +114,7 @@ const Footer = () => {
                                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z" />
                                     </svg>
                                 </span>
-                                <span>info@kommunity.com</span>
+                                <span>kwiktek0@gmail.com</span>
                             </p>
                         </div>
                     </div>
@@ -126,7 +123,7 @@ const Footer = () => {
                 <div className="border-t border-gray-800 mt-16 pt-8 text-sm text-gray-400">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div>
-                            &copy; {new Date().getFullYear()} KOmmunity. All rights reserved.
+                            &copy; {new Date().getFullYear()} KwikTek. All rights reserved.
                         </div>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
