@@ -7,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-300">
-            <div className="container mx-auto sm:px-20 md:px-12 px-4 py-16">
+            <div className="container mx-auto md:px-20 px-4 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
                         <Link href="/" className="flex items-center gap-2 mb-6">
@@ -15,7 +15,7 @@ const Footer = () => {
                                 <span className="font-bold text-white text-lg">QF</span>
                             </div>
                             <span className="font-bold text-xl text-white">
-                                QatarFoundation
+                                KOmmunity
                             </span>
                         </Link>
                         <p className="text-gray-400 mb-6">
@@ -91,7 +91,7 @@ const Footer = () => {
                                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                                     </svg>
                                 </span>
-                                <span>Qatar Foundation Headquarters<br />Education City, Doha, Qatar</span>
+                                <span>KOmmunity Headquarters<br />Education City, Juhanzberg, South-Africa</span>
                             </p>
                             <p className="flex items-center">
                                 <span className="text-purple-400 mr-3">
@@ -117,7 +117,7 @@ const Footer = () => {
                                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z" />
                                     </svg>
                                 </span>
-                                <span>info@qatarfoundation.org</span>
+                                <span>info@kommunity.com</span>
                             </p>
                         </div>
                     </div>
@@ -126,7 +126,7 @@ const Footer = () => {
                 <div className="border-t border-gray-800 mt-16 pt-8 text-sm text-gray-400">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div>
-                            &copy; {new Date().getFullYear()} Qatar Foundation. All rights reserved.
+                            &copy; {new Date().getFullYear()} KOmmunity. All rights reserved.
                         </div>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

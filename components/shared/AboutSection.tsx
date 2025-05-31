@@ -57,7 +57,7 @@ const AboutSection = () => {
                     <motion.div variants={itemVariants}>
                         <h2 className="section-title">About Our Foundation</h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            Founded in 1995, Qatar Foundation has been at the forefront of education, research, and community development. Our mission is to unlock human potential and create a knowledge-based economy that benefits not only our local communities but the entire world.
+                            Founded in 1995, KOmmunity has been at the forefront of education, research, and community development. Our mission is to unlock human potential and create a knowledge-based economy that benefits not only our local communities but the entire world.
                         </p>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                             Through our extensive network of educational institutions, research centers, and community programs, we address critical challenges facing modern societies while preserving cultural heritage and promoting sustainable development.

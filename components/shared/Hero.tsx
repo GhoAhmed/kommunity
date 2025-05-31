@@ -24,7 +24,7 @@ export const Hero = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="text-center lg:text-left"
                     >
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-10 md:leading-14">
                             <span className="gradient-text">Empowering</span> Communities Through Education & Innovation
                         </h1>
                         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">

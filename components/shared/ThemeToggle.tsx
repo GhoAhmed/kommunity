@@ -12,11 +12,15 @@ export function ThemeToggle({ checked, onCheckedChange }: ThemeToggleProps) {
     return (
         <div className="flex items-center gap-2">
             {checked ? (
-                <BsMoonFill className="text-gray-600" size={18} />
+                <BsMoonFill className="text-gray-700" size={18} aria-label="Dark mode" />
             ) : (
-                <BsSunFill className="text-yellow-500" size={18} />
+                <BsSunFill className="text-yellow-500" size={18} aria-label="Light mode" />
             )}
-            <Switch checked={checked} onCheckedChange={onCheckedChange} />
+            <Switch
+                checked={checked}
+                onCheckedChange={onCheckedChange}
+                aria-label="Toggle theme"
+            />
         </div>
     );
 }

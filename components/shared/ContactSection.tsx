@@ -67,8 +67,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                                    <a href="mailto:info@qatarfoundation.org" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                                        info@qatarfoundation.org
+                                    <a href="mailto:info@KOmmunityfoundation.org" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                        info@kommunity.com
                                     </a>
                                 </div>
                             </div>
@@ -92,9 +92,9 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Address</h4>
                                     <p className="text-gray-900 dark:text-white">
-                                        Qatar Foundation Headquarters<br />
+                                        KOmmunity Headquarters<br />
                                         Education City<br />
-                                        Doha, Qatar
+                                        Juhanzberg, South-Africa
                                     </p>
                                 </div>
                             </div>

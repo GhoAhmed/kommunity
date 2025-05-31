@@ -8,9 +8,9 @@ import Image from 'next/image';
 const testimonials = [
     {
         id: 1,
-        content: "The Qatar Foundation has transformed my academic journey. The resources, mentorship, and global exposure I received were invaluable for my career and personal growth.",
+        content: "KOmmunity has transformed my academic journey. The resources, mentorship, and global exposure I received were invaluable for my career and personal growth.",
         author: "Sarah Al-Thani",
-        title: "PhD Graduate, Georgetown University in Qatar",
+        title: "PhD Graduate, Georgetown University in KOmmunity",
         image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=922&q=80",
     },
     {
