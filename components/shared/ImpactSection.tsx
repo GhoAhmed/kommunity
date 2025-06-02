@@ -8,7 +8,7 @@ import { stats } from '@/lib/constants';
 const ImpactSection = () => {
 
     return (
-        <section className="py-24 relative bg-purple-700 text-white">
+        <section className="py-24 relative bg-purple-700 text-white dark:bg-purple-900">
             {/* Background decorations */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-0 left-0 w-64 h-64 bg-purple-500 opacity-20 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
