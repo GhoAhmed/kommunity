@@ -1,135 +1,296 @@
 'use client';
 
-import Link from "next/link";
-
-
+import React, { useEffect, useRef } from 'react';
+import { MapPin, Clock, Phone, Mail, Rocket, Star, Globe, Zap } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        const resizeCanvas = () => {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        };
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Nebula effect particles
+        const nebula: { x: number; y: number; size: number; speedX: number; speedY: number; opacity: number; color: string; pulse: number; }[] = [];
+        for (let i = 0; i < 120; i++) {
+            nebula.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 3 + 0.5,
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5,
+                opacity: Math.random() * 0.6 + 0.1,
+                color: Math.random() > 0.6 ? '#8b5cf6' : Math.random() > 0.3 ? '#06b6d4' : '#ec4899',
+                pulse: Math.random() * 0.02 + 0.008
+            });
+        }
+
+        let frame = 0;
+        const animate = () => {
+            if (!ctx) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            frame++;
+
+            nebula.forEach(particle => {
+                ctx.save();
+                particle.opacity += Math.sin(frame * particle.pulse) * 0.01;
+                ctx.globalAlpha = Math.max(0.05, Math.min(0.7, particle.opacity));
+                ctx.fillStyle = particle.color;
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+
+                particle.x += particle.speedX;
+                particle.y += particle.speedY;
+
+                if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
+                if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
+            });
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+
+        return () => {
+            window.removeEventListener('resize', resizeCanvas);
+        };
+    }, []);
+
+    const quickLinks = [
+        { name: 'About Mission', href: '/about' },
+        { name: 'Space Programs', href: '/services' },
+        { name: 'Research Labs', href: '/projects' },
+        { name: 'Cosmic Events', href: '/events' },
+        { name: 'Contact Hub', href: '/contact' }
+    ];
+
+    const educationLinks = [
+        { name: 'Stellar Education', href: '/courses' },
+        { name: 'Orbital Courses', href: '/courses' },
+        { name: 'Quantum Skills', href: '/courses' },
+        { name: 'Digital Learning', href: '/courses' },
+        { name: 'Future Development', href: '/courses' }
+    ];
+
+    const socialLinks = [
+        { name: 'Facebook', icon: <FaFacebookF size={20} />, href: '#' },
+        { name: 'Twitter', icon: <FaTwitter size={20} />, href: '#' },
+        { name: 'Instagram', icon: <FaInstagram size={20} />, href: '#' },
+        { name: 'LinkedIn', icon: <FaLinkedinIn size={20} />, href: '#' },
+    ];
+
+    const contactInfo = [
+        {
+            icon: MapPin,
+            text: 'KOmmunity Headquarters\nEducation City, Tunisia',
+            gradient: 'from-purple-500 to-pink-500'
+        },
+        {
+            icon: Clock,
+            text: 'Mission Hours: 24/7\nSupport: Mon-Fri 8AM-5PM',
+            gradient: 'from-cyan-500 to-blue-500'
+        },
+        {
+            icon: Phone,
+            text: '+216 33 492 766',
+            gradient: 'from-green-500 to-teal-500'
+        },
+        {
+            icon: Mail,
+            text: 'KOmmunity0@gmail.com',
+            gradient: 'from-orange-500 to-red-500'
+        }
+    ];
+
     return (
-        <footer className="bg-gray-900 text-gray-300">
-            <div className="container mx-auto md:px-20 px-4 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div>
-                        <Link href="/" className="flex items-center gap-2 mb-6">
-                            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                                <span className="font-bold text-white text-lg">KT</span>
+        <footer className="relative bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900 overflow-hidden">
+            {/* Animated Background */}
+            <canvas
+                ref={canvasRef}
+                className="absolute inset-0 z-0"
+                style={{ width: '100%', height: '100%' }}
+            />
+
+            {/* Background Elements */}
+            <div className="absolute inset-0 z-10">
+                {/* Cosmic elements */}
+                <div className="absolute top-20 left-20 w-32 h-32 border border-purple-400/20 rounded-full animate-pulse"></div>
+                <div className="absolute top-1/2 right-32 w-24 h-24 border-2 border-cyan-400/15 rotate-45 animate-spin" style={{ animationDuration: '30s' }}></div>
+                <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-gradient-to-r from-pink-500/15 to-purple-500/15 rounded-full animate-bounce"></div>
+
+                {/* Galaxy grid */}
+                <div className="absolute inset-0 opacity-5">
+                    <div className="w-full h-full" style={{
+                        backgroundImage: `
+                            radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
+                            radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.3) 1px, transparent 1px)
+                        `,
+                        backgroundSize: '40px 40px'
+                    }}></div>
+                </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="container mx-auto px-6 lg:px-20 py-16 relative z-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    {/* Brand Section */}
+                    <div className="space-y-6">
+                        {/* Logo */}
+                        <div className="flex items-center gap-3 group cursor-pointer">
+                            <div className="relative">
+                                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 flex items-center justify-center shadow-2xl shadow-purple-500/25 transition-transform duration-300 group-hover:scale-110">
+                                    <span className="font-bold text-white text-lg">K</span>
+                                </div>
+                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
                             </div>
-                            <span className="font-bold text-xl text-white">
-                                KOmmunity
-                            </span>
-                        </Link>
-                        <p className="text-gray-400 mb-6">
-                            From powerful SaaS platforms to intelligent AI integrations, we craft innovative tech solutions that help businesses grow.
+                            <div>
+                                <h1 className="font-bold text-2xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                                    KOmmunity
+                                </h1>
+                                <div className="text-xs text-gray-400 -mt-1">Space Innovation Hub</div>
+                            </div>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-gray-300 leading-relaxed">
+                            Pioneering the future of digital innovation through AI-powered platforms,
+                            immersive learning experiences, and cosmic-scale community connections.
                         </p>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z" /></svg>
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 14.01-7.503 14.01-14.01 0-.213-.005-.426-.015-.637a10.012 10.012 0 0 0 2.46-2.548l-.047-.02z" /></svg>
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" /></svg>
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                            </a>
+
+                        {/* Social Links */}
+                        <div className="space-y-4">
+                            <h4 className="text-white font-semibold flex items-center gap-2">
+                                <Star className="w-4 h-4 text-yellow-400" />
+                                Join Our Galaxy
+                            </h4>
+                            <div className="flex gap-3">
+                                {socialLinks.map((social, index) => (
+                                    <a
+                                        key={index}
+                                        href={social.href}
+                                        className="group w-12 h-12 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl flex items-center justify-center hover:border-purple-400/50 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-cyan-600/20 transition-all duration-300"
+                                    >
+                                        <span className="text-xl group-hover:scale-125 transition-transform duration-300">{social.icon}</span>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <h4 className="text-white text-lg font-semibold mb-6">Quick Links</h4>
+                    {/* Quick Links */}
+                    <div className="space-y-6">
+                        <h4 className="text-white text-lg font-bold flex items-center gap-2">
+                            <Rocket className="w-5 h-5 text-purple-400" />
+                            Navigation Hub
+                        </h4>
                         <ul className="space-y-3">
-                            <li>
-                                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link>
-                            </li>
-                            <li>
-                                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">Our Programs</Link>
-                            </li>
-                            <li>
-                                <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">Research</Link>
-                            </li>
-                            <li>
-                                <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">Events</Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link>
-                            </li>
+                            {quickLinks.map((link, index) => (
+                                <li key={index}>
+                                    <a
+                                        href={link.href}
+                                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-300"
+                                    >
+                                        <div className="w-1 h-1 bg-purple-400 rounded-full opacity-60 group-hover:opacity-100 group-hover:w-2 transition-all duration-300"></div>
+                                        {link.name}
+                                        <Zap className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    <div>
-                        <h4 className="text-white text-lg font-semibold mb-6">Education</h4>
+                    {/* Education Links */}
+                    <div className="space-y-6">
+                        <h4 className="text-white text-lg font-bold flex items-center gap-2">
+                            <Globe className="w-5 h-5 text-cyan-400" />
+                            Learning Universe
+                        </h4>
                         <ul className="space-y-3">
-                            <li>
-                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Education</Link>
-                            </li>
-                            <li>
-                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Courses</Link>
-                            </li>
-                            <li>
-                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Soft Skills</Link>
-                            </li>
-                            <li>
-                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Online Learning</Link>
-                            </li>
-                            <li>
-                                <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">Professional Development</Link>
-                            </li>
+                            {educationLinks.map((link, index) => (
+                                <li key={index}>
+                                    <a
+                                        href={link.href}
+                                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-300"
+                                    >
+                                        <div className="w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 group-hover:w-2 transition-all duration-300"></div>
+                                        {link.name}
+                                        <Star className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    <div>
-                        <h4 className="text-white text-lg font-semibold mb-6">Contact</h4>
+                    {/* Contact Info */}
+                    <div className="space-y-6">
+                        <h4 className="text-white text-lg font-bold flex items-center gap-2">
+                            <Mail className="w-5 h-5 text-green-400" />
+                            Mission Control
+                        </h4>
                         <div className="space-y-4">
-                            <p className="flex items-start">
-                                <span className="text-purple-400 mr-3 mt-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                    </svg>
-                                </span>
-                                <span>KOmmunity Headquarters<br />Education City, Tunisia</span>
-                            </p>
-                            <p className="flex items-center">
-                                <span className="text-purple-400 mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                                        <path d="M7.5 7.793V1h1v6.5H15v1H8.207l-4.853 4.854-.708-.708L7.5 7.793z" />
-                                    </svg>
-                                </span>
-                                <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
-                            </p>
-                            <p className="flex items-center">
-                                <span className="text-purple-400 mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-                                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                    </svg>
-                                </span>
-                                <span>+216 29 492 766</span>
-                            </p>
-                            <p className="flex items-center">
-                                <span className="text-purple-400 mr-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z" />
-                                    </svg>
-                                </span>
-                                <span>KOmmunity0@gmail.com</span>
-                            </p>
+                            {contactInfo.map((item, index) => {
+                                const Icon = item.icon;
+                                return (
+                                    <div key={index} className="group flex items-start gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                                            <Icon className="w-4 h-4 text-white" />
+                                        </div>
+                                        <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line group-hover:text-white transition-colors duration-300">
+                                            {item.text}
+                                        </p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
 
-                <div className="border-t border-gray-800 mt-16 pt-8 text-sm text-gray-400">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                        <div>
-                            &copy; {new Date().getFullYear()} KOmmunity. All rights reserved.
+                {/* Bottom Section */}
+                <div className="border-t border-white/10 mt-16 pt-8">
+                    <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+                        {/* Copyright */}
+                        <div className="text-gray-400 text-sm flex items-center gap-2">
+                            <Star className="w-4 h-4 text-purple-400" />
+                            <span>&copy; {new Date().getFullYear()} KOmmunity. Connecting across the digital cosmos.</span>
                         </div>
-                        <div className="flex space-x-6 mt-4 md:mt-0">
-                            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                            <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-                            <Link href="/accessibility" className="hover:text-white transition-colors">Accessibility</Link>
+
+                        {/* Legal Links */}
+                        <div className="flex items-center gap-6 text-sm">
+                            <a href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 flex items-center gap-1">
+                                <div className="w-1 h-1 bg-purple-400 rounded-full"></div>
+                                Privacy Policy
+                            </a>
+                            <a href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-1">
+                                <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
+                                Terms of Use
+                            </a>
+                            <a href="/accessibility" className="text-gray-400 hover:text-green-400 transition-colors duration-300 flex items-center gap-1">
+                                <div className="w-1 h-1 bg-green-400 rounded-full"></div>
+                                Accessibility
+                            </a>
                         </div>
+                    </div>
+
+                    {/* Launch Message */}
+                    <div className="text-center mt-8 p-4 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl border border-white/10">
+                        <p className="text-gray-300 text-sm">
+                            🚀 Ready to launch your cosmic journey?
+                            <span className="text-transparent bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text font-semibold">
+                                {" "}The universe of possibilities awaits!
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>
