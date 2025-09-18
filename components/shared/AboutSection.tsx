@@ -2,18 +2,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import { CheckCircle, Sparkles, Zap, Target, Users, BookOpen, Award } from 'lucide-react';
+import { features } from '@/lib/constants';
 
 const AboutSection = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-    const features = [
-        "AI-Powered Learning Tools",
-        "Interactive Course Content",
-        "Real-World Project Experience",
-        "Community-Driven Growth",
-        "Future-Ready Skills Training",
-        "Smart Automation Solutions"
-    ];
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -117,8 +109,8 @@ const AboutSection = () => {
                             {/* Floating feature cards */}
                             <div className="absolute -top-8 -left-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-4 max-w-[160px] animate-float">
                                 <BookOpen className="w-8 h-8 text-cyan-400 mb-2" />
-                                <div className="text-white text-sm font-semibold">Smart Learning</div>
-                                <div className="text-white/60 text-xs">AI-Powered</div>
+                                <div className="text-white text-sm font-semibold">Inclusivity</div>
+                                <div className="text-white/60 text-xs">Welcome</div>
                             </div>
 
                             <div className="absolute -top-4 -right-12 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-4 max-w-[160px] animate-float" style={{ animationDelay: '1s' }}>
@@ -135,8 +127,8 @@ const AboutSection = () => {
 
                             <div className="absolute -bottom-4 -right-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-4 max-w-[160px] animate-float" style={{ animationDelay: '0.5s' }}>
                                 <Award className="w-8 h-8 text-cyan-400 mb-2" />
-                                <div className="text-white text-sm font-semibold">Excellence</div>
-                                <div className="text-white/60 text-xs">Quality Driven</div>
+                                <div className="text-white text-sm font-semibold">Collaboration</div>
+                                <div className="text-white/60 text-xs">Work together</div>
                             </div>
 
                             {/* Connection lines */}
@@ -154,7 +146,7 @@ const AboutSection = () => {
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-sm text-purple-200 backdrop-blur-sm">
                             <Zap className="w-4 h-4" />
-                            <span>About Our Mission</span>
+                            <span>About KOmmunity</span>
                         </div>
 
                         {/* Main Title */}
@@ -168,10 +160,11 @@ const AboutSection = () => {
                         {/* Description */}
                         <div className="space-y-4">
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Founded in the heart of innovation, KOmmunity is a next-generation tech startup dedicated to building impactful digital products and empowering learners across the galaxy of knowledge.
+                                At KOmmunity, we believe in the power of people coming together.
+                                Our mission is to create a space where individuals, groups, and organizations can connect, share, and collaborate to make a lasting impact.
                             </p>
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Our mission transcends traditional boundaries - we are creating intelligent SaaS platforms, AI-powered tools, and immersive educational experiences that prepare individuals and businesses for the cosmic digital age.
+                                Whether it’s through knowledge sharing, meaningful discussions, or collective action, KOmmunity is here to help you grow and thrive.
                             </p>
                         </div>
 

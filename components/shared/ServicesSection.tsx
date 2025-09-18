@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Rocket, Brain, Code, Users, Star, Globe } from 'lucide-react';
+import Image from 'next/image';
 
 const ServicesSection = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -133,7 +134,7 @@ const ServicesSection = () => {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 rounded-full text-sm text-purple-200 backdrop-blur-sm mb-6">
                         <Star className="w-4 h-4" />
-                        <span>Our Cosmic Services</span>
+                        <span>Our Services</span>
                     </div>
 
                     {/* Main Title */}
@@ -168,10 +169,11 @@ const ServicesSection = () => {
                                 <div className="relative h-full bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
                                     {/* Image Container */}
                                     <div className="relative h-48 overflow-hidden rounded-t-2xl">
-                                        <img
+                                        <Image
                                             src={service.image}
                                             alt={service.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                         <div className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-60 group-hover:opacity-80 transition-opacity duration-300`}></div>
 

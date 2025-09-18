@@ -168,8 +168,8 @@ const Hero = () => {
 
                         {/* Description */}
                         <p className="text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            Embark on a journey through the universe of knowledge and collaboration.
-                            Connect with brilliant minds, explore infinite possibilities, and shape the future together.
+                            KOmmunity is where people, ideas, and opportunities come together.
+                            Join us to collaborate, share knowledge, and make an impact in your community.
                         </p>
 
                         {/* CTA Buttons */}
@@ -182,7 +182,7 @@ const Hero = () => {
                                 </div>
                             </button>
                             <button className="px-8 py-4 border-2 border-purple-400/50 text-purple-200 font-semibold rounded-xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300 hover:border-purple-400">
-                                Explore Universe
+                                Learn More
                             </button>
                         </div>
                     </div>

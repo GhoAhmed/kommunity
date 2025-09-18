@@ -8,12 +8,12 @@ export const navItems = [
 
 // About Section Features
 export const features = [
-  "Scalable SaaS solutions",
-  "AI tools for productivity",
-  "Courses in software dev",
-  "Tutorials & PDFs on demand",
-  "Real-world tech solutions",
-  "Future-ready innovations",
+  "Everyone is welcome",
+  "We work together",
+  "We embrace creativity",
+  "Empowering individuals/groups",
+  "Building a safe environment",
+  "Driving positive change",
 ];
 
 // Services Section
