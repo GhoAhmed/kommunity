@@ -66,8 +66,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                                    <a href="mailto:kwiktek0@gmail.com" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                                        kwiktek0@gmail.com
+                                    <a href="mailto:KOmmunity0@gmail.com" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                        KOmmunity0@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Address</h4>
                                     <p className="text-gray-900 dark:text-white">
-                                        KwikTek Headquarters<br />
+                                        KOmmunity Headquarters<br />
                                         Education City<br />
                                         Tunisia
                                     </p>

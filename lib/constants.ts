@@ -1,9 +1,7 @@
 // Navbar Items
 export const navItems = [
   { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
-  { name: "Courses", path: "/courses" },
+  { name: "News", path: "/news" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -111,7 +109,7 @@ export const testimonials = [
   {
     id: 1,
     content:
-      "LexaSuite by KwikTek, has transformed the way we manage our cases. It’s secure, intuitive, and saves our team hours of admin work every week.",
+      "LexaSuite by KOmmunity, has transformed the way we manage our cases. It’s secure, intuitive, and saves our team hours of admin work every week.",
     author: "Leila M.",
     title: "Legal Operations Manager",
     image:
@@ -120,7 +118,7 @@ export const testimonials = [
   {
     id: 2,
     content:
-      "Thanks of KwikTek, Skill2era helped us deliver structured, interactive training to our students with ease. The platform is clean, fast, and incredibly effective.",
+      "Thanks of KOmmunity, Skill2era helped us deliver structured, interactive training to our students with ease. The platform is clean, fast, and incredibly effective.",
     author: "Ridha Hosni",
     title: "Founder of Skill2Era",
     image:

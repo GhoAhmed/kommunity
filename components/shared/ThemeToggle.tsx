@@ -1,7 +1,6 @@
 'use client';
 
 import { BsMoonFill, BsSunFill } from 'react-icons/bs';
-import { Switch } from '@/components/ui/switch';
 
 type ThemeToggleProps = {
     checked: boolean;
@@ -10,17 +9,16 @@ type ThemeToggleProps = {
 
 export function ThemeToggle({ checked, onCheckedChange }: ThemeToggleProps) {
     return (
-        <div className="flex items-center gap-2">
+        <button
+            onClick={() => onCheckedChange(!checked)}
+            className="p-2 rounded-full transition-colors hover:bg-purple-200 dark:hover:bg-gray-700 cursor-pointer"
+            aria-label="Toggle theme"
+        >
             {checked ? (
-                <BsMoonFill className="text-gray-700" size={18} aria-label="Dark mode" />
+                <BsMoonFill className="text-gray-700 dark:text-gray-200" size={20} />
             ) : (
-                <BsSunFill className="text-yellow-500" size={18} aria-label="Light mode" />
+                <BsSunFill className="text-yellow-500" size={20} />
             )}
-            <Switch
-                checked={checked}
-                onCheckedChange={onCheckedChange}
-                aria-label="Toggle theme"
-            />
-        </div>
+        </button>
     );
 }

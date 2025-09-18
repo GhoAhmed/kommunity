@@ -50,10 +50,10 @@ const AboutSection = () => {
                     <motion.div variants={itemVariants}>
                         <h2 className="section-title">About Our Foundation</h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            Founded in the heart of innovation, Kwiktek is a next-generation tech startup dedicated to building impactful digital products and empowering learners worldwide. Our mission is to drive growth through intelligent SaaS platforms, AI-powered tools, and accessible educational content that equips individuals and businesses for the digital age.
+                            Founded in the heart of innovation, KOmmunity is a next-generation tech startup dedicated to building impactful digital products and empowering learners worldwide. Our mission is to drive growth through intelligent SaaS platforms, AI-powered tools, and accessible educational content that equips individuals and businesses for the digital age.
                         </p>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                            With a strong focus on software development, real-world learning, and future-ready solutions, Kwiktek bridges the gap between technology and education. Whether it&apos;s through interactive courses, practical tutorials, or smart automation tools, we&apos;re shaping a smarter, more connected future.
+                            With a strong focus on software development, real-world learning, and future-ready solutions, KOmmunity bridges the gap between technology and education. Whether it&apos;s through interactive courses, practical tutorials, or smart automation tools, we&apos;re shaping a smarter, more connected future.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
