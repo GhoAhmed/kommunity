@@ -109,28 +109,49 @@ export const testimonials = [
   {
     id: 1,
     content:
-      "LexaSuite by KOmmunity, has transformed the way we manage our cases. It’s secure, intuitive, and saves our team hours of admin work every week.",
-    author: "Leila M.",
-    title: "Legal Operations Manager",
+      "KOmmunity's AI-powered platform revolutionized how I approach learning. The personalized paths and real-time feedback transformed my career in just 6 months!",
+    author: "Sarah Chen",
+    title: "Senior AI Developer",
+    company: "TechNova Inc.",
+    rating: 5,
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=922&q=80",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    gradient: "from-purple-500 to-pink-500",
   },
   {
     id: 2,
     content:
-      "Thanks of KOmmunity, Skill2era helped us deliver structured, interactive training to our students with ease. The platform is clean, fast, and incredibly effective.",
-    author: "Ridha Hosni",
-    title: "Founder of Skill2Era",
+      "The community aspect is incredible! I've connected with brilliant minds from across the galaxy of tech. The collaborative projects pushed my skills beyond imagination.",
+    author: "Marcus Rodriguez",
+    title: "Full Stack Developer",
+    company: "Digital Horizons",
+    rating: 5,
     image:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    gradient: "from-cyan-500 to-blue-500",
   },
   {
     id: 3,
     content:
-      "The entrepreneurship program gave me the skills, connections, and confidence to launch my tech startup. Their holistic approach to innovation and business development is exceptional.",
-    author: "Fatima Ahmed",
-    title: "Founder & CEO, EcoTech Solutions",
+      "From zero to hero in data science! The hands-on approach and mentorship program gave me the confidence to land my dream job at a Fortune 500 company.",
+    author: "Aisha Patel",
+    title: "Data Scientist",
+    company: "Global Analytics Corp",
+    rating: 5,
     image:
-      "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=778&q=80",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    gradient: "from-green-500 to-teal-500",
+  },
+  {
+    id: 4,
+    content:
+      "The future-ready curriculum and industry connections opened doors I never knew existed. KOmmunity isn't just education—it's a launchpad to the stars!",
+    author: "David Kim",
+    title: "Product Manager",
+    company: "InnovateTech",
+    rating: 5,
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    gradient: "from-orange-500 to-red-500",
   },
 ];
